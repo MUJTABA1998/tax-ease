@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+:root{
+    --primary-font: 'Poppins', sans-serif;
+    --primary-color: #0fb9b1;
+    --secondary-color: #636e72;
+    --sec-family:  'Paytone One', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
