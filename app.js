@@ -35,7 +35,7 @@ app.post("/upload/ntn-data", async (req, res) => {
   try {
     files.forEach((file) => {
       fileData.push(file.name);
-      file.mv(`${__dirname}/client/public/Uploads/NTN/${file.name}`, (err) => {
+      file.mv(`${__dirname}/client/build/Uploads/NTN/${file.name}`, (err) => {
         if (err) {
           console.log(err);
         }
@@ -61,7 +61,7 @@ app.post("/upload/ntn-data", async (req, res) => {
 app.post("/upload/tax/docs", async (req, res) => {
   const files = req.files.fileData;
   files.forEach((file) => {
-    file.mv(`${__dirname}/client/public/Uploads/TAX/${file.name}`, (err) => {
+    file.mv(`${__dirname}/client/build/Uploads/TAX/${file.name}`, (err) => {
       if (err) {
         console.log(err);
       }
@@ -79,7 +79,7 @@ app.post("/upload/aop", async (req, res) => {
 
   files.forEach((file) => {
     filesData.push(file.name);
-    file.mv(`${__dirname}/client/public/Uploads/AOP/${file.name}`, (err) => {
+    file.mv(`${__dirname}/client/build/Uploads/AOP/${file.name}`, (err) => {
       if (err) {
         console.log(err);
       }
@@ -118,7 +118,7 @@ app.post("/upload/sole", async (req, res) => {
 
   files.forEach((file) => {
     filesData.push(file.name);
-    file.mv(`${__dirname}/client/public/Uploads/SOLE/${file.name}`, (err) => {
+    file.mv(`${__dirname}/client/build/Uploads/SOLE/${file.name}`, (err) => {
       if (err) {
         console.log(err);
       }
@@ -376,7 +376,7 @@ if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
   app.use(
     "/uploads",
-    express.static(path.resolve(__dirname, "client", "public", "Uploads"))
+    express.static(path.resolve(__dirname, "client", "build", "Uploads"))
   );
   app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
